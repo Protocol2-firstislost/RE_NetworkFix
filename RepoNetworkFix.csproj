@@ -1,0 +1,73 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>RepoNetworkFix</AssemblyName>
+    <Description>Fixes networking issues in REPO</Description>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    
+    <!-- ПОЛНОЕ ОТКЛЮЧЕНИЕ NUGET И АВТОМАТИЧЕСКИХ ССЫЛОК -->
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <RestoreOnBuild>false</RestoreOnBuild>
+    <NuGetAudit>false</NuGetAudit>
+    <ResolveNuGetPackages>false</ResolveNuGetPackages>
+    
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Базовые библиотеки .NET Standard (берем из папки Managed игры) -->
+    <Reference Include="netstandard">
+      <HintPath>libs\netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>libs\mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>libs\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>libs\System.Core.dll</HintPath>
+    </Reference>
+
+    <!-- Ссылки на BepInEx и Harmony (ДОЛЖНЫ БЫТЬ В libs!) -->
+    <Reference Include="BepInEx">
+      <HintPath>libs\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>libs\0Harmony.dll</HintPath>
+    </Reference>
+
+    <!-- Ссылки на код игры -->
+    <Reference Include="Assembly-CSharp">
+      <HintPath>libs\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>libs\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>libs\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="PhotonUnityNetworking">
+      <HintPath>libs\PhotonUnityNetworking.dll</HintPath>
+    </Reference>
+    <Reference Include="PhotonRealtime">
+      <HintPath>libs\PhotonRealtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Photon3Unity3D">
+      <HintPath>libs\Photon3Unity3D.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>libs\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>libs\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>libs\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Facepunch.Steamworks.Win64">
+      <HintPath>libs\Facepunch.Steamworks.Win64.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
