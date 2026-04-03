@@ -1,3 +1,4 @@
+Please Send me issues to upgrade my mod
 # RE_NetworkFix
 Mod For Unity Game R.E.P.O
 
